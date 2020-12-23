@@ -1,0 +1,23 @@
+@mixin child($num: 1, $not: '') {
+	@if $not == 'not' {
+		@if $num == last {
+			&:not(:last-child) {
+				@content
+			};
+		} @else {
+			&:not(:nth-child(#{$num})) {
+				@content
+			};
+		}
+	} @else {
+		@if $num == last {
+			&:last-child {
+				@content
+			};
+		} @else {
+			&:nth-child(#{$num}) {
+				@content
+			};
+		}
+	}
+}

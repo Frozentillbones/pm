@@ -1,0 +1,31 @@
+@mixin posCent($t: 50%, $l: $t, $pos: absolute) {
+	position: $pos;
+	top: $t;
+	left: $l;
+
+	transform: translate(-50%, -50%);
+}
+
+@mixin posTL($t: 0, $l: $t, $pos: absolute) {
+	position: $pos;
+	top: $t;
+	left: $l;
+}
+
+@mixin posTR($t: 0, $r: $t, $pos: absolute) {
+	position: $pos;
+	top: $t;
+	right: $r;
+}
+
+@mixin posBR($b: 0, $r: $b, $pos: absolute) {
+	position: $pos;
+	right: $r;
+	bottom: $b;
+}
+
+@mixin posBL($b: 0, $l: $b, $pos: absolute) {
+	position: $pos;
+	bottom: $b;
+	left: $l;
+}

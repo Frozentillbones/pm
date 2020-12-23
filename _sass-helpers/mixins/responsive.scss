@@ -1,0 +1,34 @@
+@import '../variables.scss';
+
+@mixin responsive ($viewport) {
+	@if $viewport == mob {
+		@media only screen and (min-width: $mob) {
+			@content;
+		}
+	}
+	@if $viewport == smart {
+		@media only screen and (min-width: $smart) {
+			@content;
+		}
+	}
+	@else if $viewport == tablet {
+		@media only screen and (min-width: $tablet) {
+			@content;
+		}
+	}
+	@else if $viewport == laptop {
+		@media only screen and (min-width: $laptop) {
+			@content;
+		}
+	}
+	@else if $viewport == desktop {
+		@media only screen and (min-width: $desktop) {
+			@content;
+		}
+	}
+	@else if $viewport == large {
+		@media only screen and (min-width: $large) {
+			@content;
+		}
+	}
+}

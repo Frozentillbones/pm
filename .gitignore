@@ -1,0 +1,9 @@
+**/node_modules
+**/.eslintrc
+**/stats.json
+**/yarn-error.log
+.csscomb.json
+config.json
+/.vscode
+layouts
+projects

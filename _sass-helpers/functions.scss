@@ -1,0 +1,15 @@
+@import 'variables.scss';
+
+@function get4BasedSize($multiplier: 1, $unit: 'px') {
+	$newDigit: $base * $multiplier;
+	@if $unit != '' {
+		@return unquote($newDigit + $unit);
+	} @else {
+		@return $newDigit;
+	}
+}
+
+@function calcRem($size) {
+	$remSize: $size / $base-font-size;
+	@return $remSize * 1rem;
+}

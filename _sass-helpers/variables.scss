@@ -1,0 +1,11 @@
+$base: 4;
+//Breakpoints
+$mob: 320px;
+$smart: 400px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
+$large: 1600px;
+$base-font-size: $base * 4; //16
+
+$anim-dur: $base * .08 + s; //0.32s

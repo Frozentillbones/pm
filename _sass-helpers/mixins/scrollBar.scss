@@ -1,0 +1,32 @@
+@import '../variables.scss';
+
+@mixin scrollBar (
+	$btns: none,
+	$width: $base * 1,
+	$rad: $width / 2,
+  $track-rad: $rad,
+	$track-color: transparent,
+  $thumb-color: rgba($color: #000000, $alpha: .3),
+  $moz-width: thin
+	) {
+	scrollbar-color: $thumb-color $track-color;
+	scrollbar-width: $moz-width;
+	&::-webkit-scrollbar-button {
+		display: $btns;
+	}
+
+	&::-webkit-scrollbar-track {
+		position: absolute;
+
+		background-color: $track-color;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: $rad + px;
+		background-color: $thumb-color;
+	}
+
+	&::-webkit-scrollbar {
+		width: $width + px;
+	}
+}
