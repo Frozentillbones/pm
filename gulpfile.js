@@ -31,7 +31,7 @@ const proj = (cb) => {
   const [ dashedProjectName ] = args;
   const projectName = dashedProjectName && dashedProjectName.replace('--', '');
 
-  const newProjectDirectory = `./projects/${projectName}`;
+  const newProjectDirectory = `../projects/${projectName}`;
   
   if (fs.existsSync(newProjectDirectory)) {
     console.warn('Project already exists');
@@ -371,14 +371,14 @@ exports.watcher = watcher;
 exports.build = build;
 
 function createFolders (projects, projectName) {
-  const src = `${projectName}/src`;
+  const src = `../${projects}/${projectName}/src`;
   const jsPath = `${src}/ts`;
   const stylePath = `${src}/style`;
   const imagesPath = `${src}/images`;
   const fontsPath = `${src}/fonts`;
 
-  !fs.existsSync(`./${projects}`) && fs.mkdirSync(`./${projects}`);
-  !fs.existsSync(projectName) && fs.mkdirSync(projectName);
+  !fs.existsSync(`../${projects}`) && fs.mkdirSync(`../${projects}`);
+  !fs.existsSync(`../${projects}/${projectName}`) && fs.mkdirSync(`../${projects}/${projectName}`);
   !fs.existsSync(src) && fs.mkdirSync(src);
   !fs.existsSync(jsPath) && fs.mkdirSync(jsPath);
   !fs.existsSync(fontsPath) && fs.mkdirSync(fontsPath);
